@@ -1,13 +1,13 @@
 import "./scss/app.scss";
 import React, {useState} from "react";
-import PizzaBlock from "./components/PizzaBlock";
-import Categories from "./components/Categories";
-import Sort from "./components/Sort";
 import Header from "./components/Header";
 
-import pizzasJson from "./pizzas.json";
 import {getPizzasArr} from "./services/getPizzas";
-import PizzaSkeleton from "./components/PizzaSkeleton";
+import {Home} from "./pages/Home";
+import {Route, Routes} from "react-router-dom";
+import {NotFound} from "./pages/NotFound";
+import {Cart} from "./pages/Cart";
+
 
 function App() {
     const [loading, setLoading] = useState(false);
@@ -34,22 +34,11 @@ function App() {
          <Header />
           <div className="content">
               <div className="container">
-                  <div className="content__top">
-                      <Categories />
-                      <Sort />
-                  </div>
-                  <h2 className="content__title">Все пиццы</h2>
-                  <div className="content__items">
-                      {
-                          loading ? (
-                              [...new Array(8)].map((_ , idx) => <PizzaSkeleton key={idx}/>)
-                          ) : (
-                              pizzasJson.map(pizza => (
-                                  <PizzaBlock key={pizza.id} {...pizza}/>
-                              ))
-                          )
-                      }
-                  </div>
+                  <Routes>
+                      <Route path="/" element={<Home loading={loading} />}/>
+                      <Route path="/cart" element={<Cart />} />
+                      <Route path="*" element={<NotFound />}/>
+                  </Routes>
               </div>
           </div>
       </div>
