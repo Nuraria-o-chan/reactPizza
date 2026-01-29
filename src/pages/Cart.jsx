@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom";
+import PIZZAIMG from "../assets/img/image 6.jpg"
 
 export const Cart = () => {
     return (
@@ -47,7 +48,7 @@ export const Cart = () => {
                             <div className="cart__item-img">
                                 <img
                                     className="pizza-block__image"
-                                    src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+                                    src={PIZZAIMG}
                                     alt="Pizza"
                                 />
                             </div>
@@ -104,7 +105,7 @@ export const Cart = () => {
                             <div className="cart__item-img">
                                 <img
                                     className="pizza-block__image"
-                                    src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+                                    src={PIZZAIMG}
                                     alt="Pizza"
                                 />
                             </div>
@@ -161,7 +162,7 @@ export const Cart = () => {
                             <div className="cart__item-img">
                                 <img
                                     className="pizza-block__image"
-                                    src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+                                    src={PIZZAIMG}
                                     alt="Pizza"
                                 />
                             </div>
@@ -218,7 +219,7 @@ export const Cart = () => {
                             <div className="cart__item-img">
                                 <img
                                     className="pizza-block__image"
-                                    src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+                                    src={PIZZAIMG}
                                     alt="Pizza"
                                 />
                             </div>
